@@ -18,6 +18,13 @@ defined('_JEXEC') or die;
 class UsersRouterRulesLegacy implements JComponentRouterRulesInterface
 {
 	/**
+	 * router
+	 *
+	 * @var    object
+	 */
+	public $router = null;	
+
+	/**
 	 * Constructor for this legacy router
 	 *
 	 * @param   JComponentRouterAdvanced  $router  The router this rule belongs to

@@ -17,6 +17,14 @@ defined('_JEXEC') or die;
  */
 class NewsfeedsRouterRulesLegacy implements JComponentRouterRulesInterface
 {
+
+	/**
+	 * router
+	 *
+	 * @var    object
+	*/
+	public $router = null;	
+
 	/**
 	 * Constructor for this legacy router
 	 *
