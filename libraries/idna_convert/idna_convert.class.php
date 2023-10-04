@@ -87,6 +87,13 @@ class idna_convert
     protected $_idn_version = 2003;      // Can be either 2003 (old, default) or 2008
 
     /**
+    * slast
+    *
+    * @var    integer
+    */
+    public $slast = null;
+
+    /**
      * the constructor
      *
      * @param array $options
