@@ -51,7 +51,12 @@ Is it easy to change the layout display?
 
 Ready to install Joomla?
 ---------------------
-* Check the [minimum requirements](https://downloads.joomla.org/technical-requirements).
+* Check the minimum requirements
+	PHP minimum v7.1, recommended v8.2 
+        (Magic Quotes GPC, MB String Overload = off)
+        (Zlib Compression Support, XML Support, INI Parser Support, JSON Support, MB Language = Default, Intl support), 
+    MySQL minimum v5.1, recommended v5.5.3 + (InnoDB support required)
+    Apache minimum v2.0, recommended v2.4 + (with mod_mysql, mod_xml, and mod_zlib)
 * How do you [install Joomla](https://docs.joomla.org/Special:MyLanguage/J3.x:Installing_Joomla)?
 * You could start your Joomla! experience by [building your site on a local test server](https://docs.joomla.org/Special:MyLanguage/Installing_Joomla_locally).
 When ready, it can be moved to an online hosting account of your choice.
