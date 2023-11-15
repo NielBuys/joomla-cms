@@ -45,6 +45,11 @@ class LogEntry
 	 */
 	public $date;
 
+	public $datetime;
+
+	public $time;
+
+
 	/**
 	 * Message to be logged.
 	 * @var    string
@@ -82,6 +87,8 @@ class LogEntry
 	 * @since  3.1.4
 	 */
 	public $callStack = array();
+
+	public $clientIP = null;
 
 	/**
 	 * Constructor

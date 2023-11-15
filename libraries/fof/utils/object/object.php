@@ -18,7 +18,9 @@ defined('FOF_INCLUDED') or die;
  * @deprecated  2.1
  * @codeCoverageIgnore
  */
-class FOFUtilsObject
+
+#[AllowDynamicProperties]
+ class FOFUtilsObject
 {
     /**
      * An array of error messages or Exception objects.

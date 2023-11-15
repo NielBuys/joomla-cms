@@ -7,7 +7,7 @@
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
-defined('JPATH_PLATFORM') or die;
+ defined('JPATH_PLATFORM') or die;
 
 /**
  * Form Field class for the Joomla Platform.
@@ -17,6 +17,7 @@ defined('JPATH_PLATFORM') or die;
  *
  * @since  1.7.0
  */
+#[AllowDynamicProperties]
 class JFormFieldCalendar extends JFormField
 {
 	/**

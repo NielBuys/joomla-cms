@@ -90,6 +90,8 @@ class CMSApplication extends WebApplication
 	 */
 	protected $template = null;
 
+	public $JComponentTitle = null;
+
 	/**
 	 * Class constructor.
 	 *
