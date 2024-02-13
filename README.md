@@ -1,12 +1,6 @@
 Fork of Joomla! CMS v3™ [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cms/readme)](https://github.com/igrigorik/ga-beacon)
 ======================
 
-Build Status
----------------------
-| Drone-CI | AppVeyor |
-| ------------- | ------------- |
-|  [![Build Status](https://ci.joomla.org/api/badges/joomla/joomla-cms/status.svg)](https://ci.joomla.org/joomla/joomla-cms)  | [![Build status](https://ci.appveyor.com/api/projects/status/ru6sxal8jmfckvjc/branch/3.10-dev?svg=true)](https://ci.appveyor.com/project/release-joomla/joomla-cms)  |
-
 What is this?
 ---------------------
 * This is a Joomla! 3.x installation/upgrade package.
