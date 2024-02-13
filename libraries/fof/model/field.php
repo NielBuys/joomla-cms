@@ -47,6 +47,8 @@ abstract class FOFModelField
 	 */
 	public $null_value = null;
 
+	public $filterzero = null;
+
 	/**
 	 * Constructor
 	 *

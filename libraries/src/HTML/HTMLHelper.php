@@ -16,6 +16,7 @@ use Joomla\CMS\Layout\LayoutHelper;
 use Joomla\CMS\Log\Log;
 use Joomla\CMS\Uri\Uri;
 use Joomla\Utilities\ArrayHelper;
+use function PHP81_BC\strftime;
 
 \JLoader::import('joomla.environment.browser');
 \JLoader::import('joomla.filesystem.file');
@@ -1047,7 +1048,9 @@ abstract class HTMLHelper
 		{
 			$tz = date_default_timezone_get();
 			date_default_timezone_set('UTC');
-			$inputvalue = strftime($format, strtotime($value));
+/// This used for replacement https://github.com/alphp/strftime
+			$inputvalue = strftime($format, new \DateTime($value),'UTC');
+			//	$inputvalue = strftime($format, strtotime($value));
 			date_default_timezone_set($tz);
 		}
 		else

@@ -19,6 +19,10 @@ defined('JPATH_PLATFORM') or die;
  * @since       1.7.0
  * @deprecated  4.0
  */
+
+use AllowDynamicProperties;
+
+#[AllowDynamicProperties]
 class CMSObject
 {
 	/**

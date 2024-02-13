@@ -96,6 +96,14 @@ class User extends \JObject
 	public $sendEmail = null;
 
 	/**
+	 * aid
+	 *
+	 * @var    integer
+	 * @since  1.7.0
+	 */
+	public $aid = null;
+
+	/**
 	 * Date the user was registered
 	 *
 	 * @var    string

@@ -46,6 +46,14 @@ class CacheStorage
 	public $_lifetime;
 
 	/**
+	 * Cache threshold
+	 *
+	 * @var    integer
+	 * @since  1.7.0
+	 */
+	public $_threshold;
+
+	/**
 	 * Flag if locking is enabled
 	 *
 	 * @var    boolean

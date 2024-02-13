@@ -721,7 +721,7 @@ class MenusModelItem extends JModelAdmin
 
 				// Ensure the integrity of the component_id field is maintained, particularly when changing the menu item type.
 				$args = array();
-				parse_str(parse_url($table->link, PHP_URL_QUERY), $args);
+				parse_str(parse_url($table->link ?? '', PHP_URL_QUERY) ?? '', $args);
 
 				if (isset($args['option']))
 				{
@@ -1071,11 +1071,11 @@ class MenusModelItem extends JModelAdmin
 		// Initialise form with component view params if available.
 		if ($type == 'component')
 		{
-			$link = htmlspecialchars_decode($link);
+			$link = htmlspecialchars_decode($link ?? '');
 
 			// Parse the link arguments.
 			$args = array();
-			parse_str(parse_url(htmlspecialchars_decode($link), PHP_URL_QUERY), $args);
+			parse_str(parse_url(htmlspecialchars_decode($link) ?? '', PHP_URL_QUERY) ?? '', $args);
 
 			// Confirm that the option is defined.
 			$option = '';

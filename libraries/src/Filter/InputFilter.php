@@ -1178,7 +1178,7 @@ class InputFilter extends BaseInputFilter
 
 			foreach ($trans_tbl as $k => $v)
 			{
-				$ttr[$v] = utf8_encode($k);
+				$ttr[$v] = mb_convert_encoding($k, 'UTF-8', 'ISO-8859-1');
 			}
 		}
 

@@ -32,7 +32,7 @@ class ConfigControllerHelper
 	 *
 	 * @since   3.2
 	 */
-	public function parseController($app)
+	 public function parseController($app)
 	{
 		$tasks = array();
 

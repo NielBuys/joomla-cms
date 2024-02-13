@@ -85,6 +85,10 @@ abstract class JControllerBase implements JController
 	{
 		return serialize($this->input);
 	}
+	public function __serialize()
+	{
+		return serialize($this->input);
+	}
 
 	/**
 	 * Unserialize the controller.
@@ -97,6 +101,21 @@ abstract class JControllerBase implements JController
 	 * @throws  UnexpectedValueException if input is not the right class.
 	 */
 	public function unserialize($input)
+	{
+		// Setup dependencies.
+		$this->app = $this->loadApplication();
+
+		// Unserialize the input.
+		$this->input = unserialize($input);
+
+		if (!($this->input instanceof JInput))
+		{
+			throw new UnexpectedValueException(sprintf('%s::unserialize would not accept a `%s`.', get_class($this), gettype($this->input)));
+		}
+
+		return $this;
+	}
+	public function __unserialize($input)
 	{
 		// Setup dependencies.
 		$this->app = $this->loadApplication();

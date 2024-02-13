@@ -218,6 +218,8 @@ class Document
 	 */
 	protected $mediaVersion = null;
 
+	public $submenumodules = null;
+
 	/**
 	 * Class constructor.
 	 *

@@ -48,6 +48,8 @@ abstract class ConfigViewCmsHtml extends JViewHtml
 	 */
 	protected $_layoutExt = 'php';
 
+	public $_name = null;
+
 	/**
 	 * Method to instantiate the view.
 	 *

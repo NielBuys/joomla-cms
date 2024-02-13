@@ -313,7 +313,7 @@ class CategoriesModelCategory extends JModelAdmin
 			if (!$data->id)
 			{
 				// Check for which extension the Category Manager is used and get selected fields
-				$extension = substr($app->getUserState('com_categories.categories.filter.extension'), 4);
+				$extension = substr($app->getUserState('com_categories.categories.filter.extension') ?? '', 4);
 				$filters = (array) $app->getUserState('com_categories.categories.' . $extension . '.filter');
 
 				$data->set(
