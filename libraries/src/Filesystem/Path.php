@@ -222,7 +222,7 @@ class Path
 			);
 		}
 
-		$path = trim($path);
+		$path = trim($path ?? '');
 
 		if (empty($path))
 		{

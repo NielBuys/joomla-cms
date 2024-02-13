@@ -14,13 +14,20 @@ defined('_JEXEC') or die;
  *
  * @since  3.2
  */
-class ConfigViewApplicationHtml extends ConfigViewCmsHtml
+#[AllowDynamicProperties]
+ class ConfigViewApplicationHtml extends ConfigViewCmsHtml
 {
 	public $state;
 
 	public $form;
 
 	public $data;
+
+	public $ftp;
+	public $usersParams;
+	public $mediaParams;
+	public $components;
+	public $userIsSuperAdmin;
 
 	/**
 	 * Method to display the view.

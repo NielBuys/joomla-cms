@@ -15,7 +15,8 @@ defined('_JEXEC') or die;
  * @since  3.2
  * @note   Needed for front end view
  */
-class ConfigControllerComponentDisplay extends ConfigControllerDisplay
+#[AllowDynamicProperties]
+ class ConfigControllerComponentDisplay extends ConfigControllerDisplay
 {
 	/**
 	 * Prefix for the view and model classes

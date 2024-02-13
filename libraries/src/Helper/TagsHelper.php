@@ -47,6 +47,10 @@ class TagsHelper extends CMSHelper
 	 */
 	public $typeAlias = null;
 
+	private $tags;
+
+	private $itemTags;
+
 	/**
 	 * Method to add tag rows to mapping table.
 	 *

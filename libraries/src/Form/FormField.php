@@ -13,13 +13,15 @@ defined('JPATH_PLATFORM') or die;
 use Joomla\CMS\Layout\FileLayout;
 use Joomla\String\Normalise;
 use Joomla\String\StringHelper;
+use AllowDynamicProperties;
 
 /**
  * Abstract Form Field class for the Joomla Platform.
  *
  * @since  1.7.0
  */
-abstract class FormField
+#[AllowDynamicProperties]
+ abstract class FormField
 {
 	/**
 	 * The description text for the form field. Usually used in tooltips.

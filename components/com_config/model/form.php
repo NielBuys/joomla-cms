@@ -29,6 +29,8 @@ abstract class ConfigModelForm extends ConfigModelCms
 	 */
 	protected $forms = array();
 
+	protected $_forms = array();
+
 	/**
 	 * Method to checkin a row.
 	 *

@@ -50,6 +50,8 @@ abstract class ConfigModelCms extends JModelDatabase
 	 */
 	protected $__state_set = null;
 
+	public $event_clean_cache = null;
+
 	/**
 	 * Constructor
 	 *
