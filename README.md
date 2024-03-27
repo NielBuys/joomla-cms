@@ -1,12 +1,11 @@
-Fork of Joomla! CMS v3™ [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cms/readme)](https://github.com/igrigorik/ga-beacon)
+Fork of Joomla! CMS v3™
 ======================
 
 What is this?
 ---------------------
 * This is a Joomla! 3.x installation/upgrade package.
 * Joomla's [Official website](https://www.joomla.org).
-* Joomla! 3.10 [version history](https://docs.joomla.org/Special:MyLanguage/Joomla_3.10_version_history).
-* Detailed changes are in the [changelog](https://github.com/joomla/joomla-cms/commits/3.10-dev).
+* Joomla! 3 [version history](https://github.com/NielBuys/joomla-cms/releases).
 
 What is Joomla?
 ---------------------
@@ -57,7 +56,7 @@ When ready, it can be moved to an online hosting account of your choice.
 
 Updates are free!
 ---------------------
-* Always use the [latest version](https://downloads.joomla.org/latest).
+* Always use the [latest version](https://github.com/NielBuys/joomla-cms/releases).
 
 Where can you get support and help?
 ---------------------
