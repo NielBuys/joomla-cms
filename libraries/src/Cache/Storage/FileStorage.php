@@ -275,11 +275,14 @@ class FileStorage extends CacheStorage
 			case 'notgroup' :
 				$folders = $this->_folders($this->_root);
 
-				for ($i = 0, $n = count($folders); $i < $n; $i++)
+				if (is_countable($folders))
 				{
-					if ($folders[$i] != $folder)
+					for ($i = 0, $n = count($folders); $i < $n; $i++)
 					{
-						$return |= $this->_deleteFolder($this->_root . '/' . $folders[$i]);
+						if ($folders[$i] != $folder)
+						{
+							$return |= $this->_deleteFolder($this->_root . '/' . $folders[$i]);
+						}
 					}
 				}
 
@@ -714,7 +717,6 @@ class FileStorage extends CacheStorage
 		if (!is_dir($path))
 		{
 			Log::add(__METHOD__ . ' ' . \JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path), Log::WARNING, 'jerror');
-
 			return false;
 		}
 
@@ -775,7 +777,6 @@ class FileStorage extends CacheStorage
 		}
 
 		closedir($handle);
-
 		return $arr;
 	}
 }
