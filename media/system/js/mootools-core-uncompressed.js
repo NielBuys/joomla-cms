@@ -131,6 +131,9 @@ Function.from = function(item){
 };
 
 Array.from = function(item){
+	/* BEGIN dblaze.eu hack/fix */
+	if(new Error().stack.indexOf('recaptcha') >= 0) return [].slice.call(item);
+	/* END dblaze.eu hack/fix */
 	if (item == null) return [];
 	return (Type.isEnumerable(item) && typeof item != 'string') ? (typeOf(item) == 'array') ? item : slice.call(item) : [item];
 };
