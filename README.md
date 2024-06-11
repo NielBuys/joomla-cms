@@ -82,6 +82,8 @@ Do you want to improve Joomla?
 * Documentation for [Developers](https://docs.joomla.org/Special:MyLanguage/Portal:Developers).
 * Documentation for [Web designers](https://docs.joomla.org/Special:MyLanguage/Web_designers).
 
+NOTE: Build release steps: After version up commit, release and tag created in github run: "php build/build.php" then release files will be in "build/tmp/packages"
+
 Copyright
 ---------------------
 * Copyright (C) 2005 - 2021 Open Source Matters. All rights reserved.

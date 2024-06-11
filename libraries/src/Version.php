@@ -49,7 +49,7 @@ final class Version
 	 * @var    integer
 	 * @since  3.8.0
 	 */
-	const PATCH_VERSION = 1;
+	const PATCH_VERSION = 2;
 
 	/**
 	 * Extra release version info.
@@ -111,7 +111,7 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
-	const RELDATE = '03-April-2024';
+	const RELDATE = '11-June-2024';
 
 	/**
 	 * Release time.
@@ -119,7 +119,7 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
-	const RELTIME = '13:17';
+	const RELTIME = '15:03';
 
 	/**
 	 * Release timezone.
