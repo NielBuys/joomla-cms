@@ -1,9 +1,9 @@
 {
     "name": "joomla/joomla-cms",
     "type": "project",
-    "description": "Joomla CMS",
+    "description": "Fork of Joomla! CMS v3",
     "keywords": ["joomla", "cms"],
-    "homepage": "https://github.com/joomla/joomla-cms",
+    "homepage": "https://github.com/NielBuys/joomla-cms",
     "license": "GPL-2.0-or-later",
     "config": {
         "optimize-autoloader": true,
@@ -14,10 +14,7 @@
         "github-protocols": ["https"]
     },
     "support": {
-        "issues": "https://issues.joomla.org",
-        "irc": "https://irc.lc/freenode/joomla/",
-        "forum": "https://forum.joomla.org/",
-        "docs": "https://docs.joomla.org"
+        "issues": "https://github.com/NielBuys/joomla-cms/issues"
     },
     "repositories": [
       {
@@ -32,7 +29,7 @@
       }
     ],
     "require": {
-        "php": ">=5.3.10",
+        "php": ">=7.1.0",
         "joomla/application": "~1.9",
         "joomla/archive": "^1.1.7",
         "joomla/data": "~1.2",
