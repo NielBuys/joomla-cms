@@ -146,7 +146,7 @@ class InputFilter extends BaseInputFilter
 		}
 
 		// Handle the type constraint cases
-		switch (strtoupper($type))
+		switch (strtoupper($type ?? ''))
 		{
 			case 'INT':
 			case 'INTEGER':
