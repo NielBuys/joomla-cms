@@ -77,7 +77,7 @@ abstract class JHtmlGrid
 		JHtml::_('behavior.core');
 		JHtml::_('bootstrap.popover');
 
-		$direction = strtolower($direction);
+		$direction = strtolower($direction ?? '');
 		$icon = array('arrow-up-3', 'arrow-down-3');
 		$index = (int) ($direction === 'desc');
 
