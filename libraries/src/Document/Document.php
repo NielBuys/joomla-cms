@@ -220,6 +220,8 @@ class Document
 
 	public $submenumodules = null;
 
+	public $menumodules = null;
+
 	/**
 	 * Class constructor.
 	 *
