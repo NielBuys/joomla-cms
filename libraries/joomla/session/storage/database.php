@@ -27,7 +27,7 @@ class JSessionStorageDatabase extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function read($id)
+	public function read(string $id): string|false
 	{
 		// Get the database connection object and verify its connected.
 		$db = JFactory::getDbo();
@@ -64,7 +64,7 @@ class JSessionStorageDatabase extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function write($id, $data)
+	public function write($id, $data): bool
 	{
 		// Get the database connection object and verify its connected.
 		$db = JFactory::getDbo();
@@ -105,7 +105,7 @@ class JSessionStorageDatabase extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function destroy($id)
+	public function destroy($id): bool
 	{
 		// Get the database connection object and verify its connected.
 		$db = JFactory::getDbo();
@@ -136,7 +136,7 @@ class JSessionStorageDatabase extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function gc($lifetime = 1440)
+	public function gc($lifetime = 1440): int|false
 	{
 		// Get the database connection object and verify its connected.
 		$db = JFactory::getDbo();

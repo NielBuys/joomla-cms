@@ -16,7 +16,7 @@ defined('JPATH_PLATFORM') or die;
  * @since       1.7.0
  * @deprecated  4.0  The CMS' Session classes will be replaced with the `joomla/session` package
  */
-abstract class JSessionStorage
+abstract class JSessionStorage implements SessionHandlerInterface
 {
 	/**
 	 * @var    JSessionStorage[]  JSessionStorage instances container.
@@ -95,17 +95,17 @@ abstract class JSessionStorage
 	 */
 	public function register()
 	{
-		if (!headers_sent())
-		{
-			session_set_save_handler(
-				array($this, 'open'),
-				array($this, 'close'),
-				array($this, 'read'),
-				array($this, 'write'),
-				array($this, 'destroy'),
-				array($this, 'gc')
-			);
-		}
+	//	if (!headers_sent())
+	//	{
+	//		session_set_save_handler(
+	//			array($this, 'open'),
+	//			array($this, 'close'),
+	//			array($this, 'read'),
+	//			array($this, 'write'),
+	//			array($this, 'destroy'),
+	//			array($this, 'gc')
+	//		);
+	//	}
 	}
 
 	/**
@@ -118,7 +118,7 @@ abstract class JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function open($savePath, $sessionName)
+	public function open(string $savePath, string $sessionName): bool
 	{
 		return true;
 	}
@@ -130,7 +130,7 @@ abstract class JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function close()
+	public function close(): bool
 	{
 		return true;
 	}
@@ -145,9 +145,9 @@ abstract class JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function read($id)
+	public function read(string $id): string|false
 	{
-		return;
+		return '';
 	}
 
 	/**
@@ -160,7 +160,7 @@ abstract class JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function write($id, $sessionData)
+	public function write($id, $sessionData): bool
 	{
 		return true;
 	}
@@ -175,7 +175,7 @@ abstract class JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function destroy($id)
+	public function destroy($id): bool
 	{
 		return true;
 	}
@@ -189,7 +189,7 @@ abstract class JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function gc($maxlifetime = null)
+	public function gc(int $maxlifetime): int|false
 	{
 		return true;
 	}

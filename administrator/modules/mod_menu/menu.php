@@ -65,7 +65,7 @@ class JAdminCssMenu
 	 *
 	 * @since   3.9.1
 	 */
-	public function __construct(User $user = null)
+	public function __construct(?User $user = null)
 	{
 		if ($user === null)
 		{
