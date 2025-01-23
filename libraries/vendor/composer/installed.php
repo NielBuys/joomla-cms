@@ -137,9 +137,9 @@
             'dev_requirement' => false,
         ),
         'joomla/input' => array(
-            'pretty_version' => '1.4.0',
-            'version' => '1.4.0.0',
-            'reference' => 'a89927d412cdc8172889e3e0e3e66a134f367be1',
+            'pretty_version' => 'v1.5.0',
+            'version' => '1.5.0.0',
+            'reference' => 'a82c6a4af5b01837460ab156de7ba0e7bfdec5c0',
             'type' => 'joomla-package',
             'install_path' => __DIR__ . '/../joomla/input',
             'aliases' => array(),

@@ -26,6 +26,10 @@
         "type": "vcs",
         "url": "https://github.com/joomla-backports/PHPMailer.git",
         "no-api":  true
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/NielBuys/JoomlaInput.git"
       }
     ],
     "require": {
@@ -37,7 +41,7 @@
         "joomla/event": "~1.2",
         "joomla/filter": "^1.4.3",
         "joomla/image": "^1.5",
-        "joomla/input": "~1.3",
+        "joomla/input": "~1.5",
         "joomla/ldap": "~1.2",
         "joomla/registry": "^1.6",
         "joomla/session": "^1.3.4",

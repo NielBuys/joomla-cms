@@ -842,17 +842,17 @@
         },
         {
             "name": "joomla/input",
-            "version": "1.4.0",
-            "version_normalized": "1.4.0.0",
+            "version": "v1.5.0",
+            "version_normalized": "1.5.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/joomla-framework/input.git",
-                "reference": "a89927d412cdc8172889e3e0e3e66a134f367be1"
+                "url": "https://github.com/NielBuys/JoomlaInput.git",
+                "reference": "a82c6a4af5b01837460ab156de7ba0e7bfdec5c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomla-framework/input/zipball/a89927d412cdc8172889e3e0e3e66a134f367be1",
-                "reference": "a89927d412cdc8172889e3e0e3e66a134f367be1",
+                "url": "https://api.github.com/repos/NielBuys/JoomlaInput/zipball/a82c6a4af5b01837460ab156de7ba0e7bfdec5c0",
+                "reference": "a82c6a4af5b01837460ab156de7ba0e7bfdec5c0",
                 "shasum": ""
             },
             "require": {
@@ -864,7 +864,7 @@
                 "joomla/test": "~1.0",
                 "phpunit/phpunit": "^4.8.35|^5.4.3|~6.0"
             },
-            "time": "2019-06-15T22:13:58+00:00",
+            "time": "2025-01-23T11:40:35+00:00",
             "type": "joomla-package",
             "extra": {
                 "branch-alias": {
@@ -877,7 +877,11 @@
                     "Joomla\\Input\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Joomla\\Input\\Tests\\": "Tests/"
+                }
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -889,9 +893,18 @@
                 "joomla"
             ],
             "support": {
-                "issues": "https://github.com/joomla-framework/input/issues",
-                "source": "https://github.com/joomla-framework/input/tree/1.4.0"
+                "source": "https://github.com/NielBuys/JoomlaInput/tree/v1.5.0"
             },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/joomla"
+                },
+                {
+                    "type": "custom",
+                    "url": "https://community.joomla.org/sponsorship-campaigns.html"
+                }
+            ],
             "install-path": "../joomla/input"
         },
         {

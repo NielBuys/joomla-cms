@@ -368,7 +368,7 @@ class Input implements \Serializable, \Countable
 	 *
 	 * @since   1.0
 	 */
-	public function serialize()
+	public function serialize(): array
 	{
 		// Load all of the inputs.
 		$this->loadAllInputs();
@@ -377,20 +377,29 @@ class Input implements \Serializable, \Countable
 		$inputs = $this->inputs;
 		unset($inputs['env'], $inputs['server']);
 
-		// Serialize the options, data, and inputs.
-		return serialize(array($this->options, $this->data, $inputs));
+		// Return an array representation of the object's state.
+		return [
+			'options' => $this->options,
+			'data' => $this->data,
+			'inputs' => $inputs,
+		];
 	}
-	public function __serialize()
+	
+	public function __serialize(): array
 	{
 		// Load all of the inputs.
 		$this->loadAllInputs();
-
+	
 		// Remove $_ENV and $_SERVER from the inputs.
 		$inputs = $this->inputs;
 		unset($inputs['env'], $inputs['server']);
-
-		// Serialize the options, data, and inputs.
-		return serialize(array($this->options, $this->data, $inputs));
+	
+		// Return an array representation of the object's state.
+		return [
+			'options' => $this->options,
+			'data' => $this->data,
+			'inputs' => $inputs,
+		];
 	}
 
 	/**
