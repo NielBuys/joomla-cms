@@ -109,7 +109,7 @@ class Date extends \DateTime
 		$date = is_numeric($date) ? date('c', $date) : $date;
 
 		// Call the DateTime constructor.
-		parent::__construct($date, $tz);
+		parent::__construct($date ?? 'now', $tz);
 
 		// Reset the timezone for 3rd party libraries/extension that does not use JDate
 		date_default_timezone_set(self::$stz->getName());
@@ -431,7 +431,7 @@ class Date extends \DateTime
 	 * @link    http://dev.mysql.com/doc/refman/5.0/en/datetime.html
 	 * @since   2.5.0
 	 */
-	public function toSql($local = false, \JDatabaseDriver $db = null)
+	public function toSql($local = false, ?\JDatabaseDriver $db = null)
 	{
 		if ($db === null)
 		{

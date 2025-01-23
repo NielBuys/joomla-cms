@@ -1049,8 +1049,8 @@ abstract class HTMLHelper
 			$tz = date_default_timezone_get();
 			date_default_timezone_set('UTC');
 /// This used for replacement https://github.com/alphp/strftime
-			$inputvalue = strftime($format, new \DateTime($value),'UTC');
-			//	$inputvalue = strftime($format, strtotime($value));
+//			$inputvalue = strftime($format, new \DateTime($value),'UTC');
+			$inputvalue = strftime($format, strtotime($value));
 			date_default_timezone_set($tz);
 		}
 		else

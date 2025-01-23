@@ -136,7 +136,7 @@ class JSessionStorageDatabase extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function gc($lifetime = 1440): int|false
+	public function gc(int $lifetime = 1440): int|false
 	{
 		// Get the database connection object and verify its connected.
 		$db = JFactory::getDbo();

@@ -238,7 +238,7 @@ class User extends \JObject
 	 *
 	 * @since   1.7.0
 	 */
-	public function __construct($identifier = 0, UserWrapper $userHelper = null)
+	public function __construct($identifier = 0, ?UserWrapper $userHelper = null)
 	{
 		if (null === $userHelper)
 		{
@@ -275,7 +275,7 @@ class User extends \JObject
 	 *
 	 * @since   1.7.0
 	 */
-	public static function getInstance($identifier = 0, UserWrapper $userHelper = null)
+	public static function getInstance($identifier = 0, ?UserWrapper $userHelper = null)
 	{
 		if (null === $userHelper)
 		{

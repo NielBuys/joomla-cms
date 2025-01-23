@@ -46,7 +46,7 @@ class JSessionStorageApc extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function read($id)
+	public function read(string $id): string|false
 	{
 		$sess_id = 'sess_' . $id;
 
@@ -63,7 +63,7 @@ class JSessionStorageApc extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function write($id, $sessionData)
+	public function write($id, $sessionData): bool
 	{
 		$sess_id = 'sess_' . $id;
 
@@ -79,7 +79,7 @@ class JSessionStorageApc extends JSessionStorage
 	 *
 	 * @since   1.7.0
 	 */
-	public function destroy($id)
+	public function destroy($id): bool
 	{
 		$sess_id = 'sess_' . $id;
 

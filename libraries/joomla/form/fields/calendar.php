@@ -9,6 +9,8 @@
 
  defined('JPATH_PLATFORM') or die;
 
+ use function PHP81_BC\strftime;
+
 /**
  * Form Field class for the Joomla Platform.
  *
@@ -191,8 +193,8 @@ class JFormFieldCalendar extends JFormField
 	 */
 	protected function getInput()
 	{
-		$config    = JFactory::getConfig();
-		$user      = JFactory::getUser();
+		$config = JFactory::getConfig();
+		$user = JFactory::getUser();
 
 		// Translate the format if requested
 		$translateFormat = (string) $this->element['translateformat'];
@@ -201,7 +203,7 @@ class JFormFieldCalendar extends JFormField
 		{
 			$showTime = (string) $this->element['showtime'];
 
-			$lang  = \JFactory::getLanguage();
+			$lang = \JFactory::getLanguage();
 			$debug = $lang->setDebug(false);
 
 			if ($showTime && $showTime != 'false')

@@ -86,7 +86,7 @@ class FieldsHelper
 	 *
 	 * @since   3.7.0
 	 */
-	public static function getFields($context, $item = null, $prepareValue = false, array $valuesToOverride = null)
+	public static function getFields($context, $item = null, $prepareValue = false, ?array $valuesToOverride = null)
 	{
 		if (self::$fieldsCache === null)
 		{

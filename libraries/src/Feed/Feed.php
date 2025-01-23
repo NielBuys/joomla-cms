@@ -191,7 +191,7 @@ class Feed implements \ArrayAccess, \Countable
 	 *
 	 * @return  integer number of entries in the feed.
 	 */
-	public function count()
+	public function count(): int
 	{
 		return count($this->entries);
 	}
@@ -207,7 +207,7 @@ class Feed implements \ArrayAccess, \Countable
 	 * @see     ArrayAccess::offsetExists()
 	 * @since   3.1.4
 	 */
-	public function offsetExists($offset)
+	public function offsetExists($offset): bool
 	{
 		return isset($this->entries[$offset]);
 	}
@@ -222,7 +222,7 @@ class Feed implements \ArrayAccess, \Countable
 	 * @see     ArrayAccess::offsetGet()
 	 * @since   3.1.4
 	 */
-	public function offsetGet($offset)
+	public function offsetGet($offset): mixed
 	{
 		return $this->entries[$offset];
 	}
@@ -239,7 +239,7 @@ class Feed implements \ArrayAccess, \Countable
 	 * @since   3.1.4
 	 * @throws  \InvalidArgumentException
 	 */
-	public function offsetSet($offset, $value)
+	public function offsetSet($offset, $value): void
 	{
 		if (!($value instanceof FeedEntry))
 		{
@@ -254,7 +254,7 @@ class Feed implements \ArrayAccess, \Countable
 
 		$this->entries[$offset] = $value;
 
-		return true;
+	//	return true;
 	}
 
 	/**
@@ -267,7 +267,7 @@ class Feed implements \ArrayAccess, \Countable
 	 * @see     ArrayAccess::offsetUnset()
 	 * @since   3.1.4
 	 */
-	public function offsetUnset($offset)
+	public function offsetUnset($offset): void
 	{
 		unset($this->entries[$offset]);
 	}

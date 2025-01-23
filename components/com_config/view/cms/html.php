@@ -58,7 +58,7 @@ abstract class ConfigViewCmsHtml extends JViewHtml
 	 *
 	 * @since   3.2
 	 */
-	public function __construct(JModel $model, SplPriorityQueue $paths = null)
+	public function __construct(JModel $model, ?SplPriorityQueue $paths = null)
 	{
 		$app = JFactory::getApplication();
 		$component = JApplicationHelper::getComponentName();

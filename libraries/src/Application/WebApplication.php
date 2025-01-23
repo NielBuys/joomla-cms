@@ -201,7 +201,7 @@ class WebApplication extends BaseApplication
 	 *
 	 * @since   1.7.3
 	 */
-	public function __construct(Input $input = null, Registry $config = null, \JApplicationWebClient $client = null)
+	public function __construct(?Input $input = null, ?Registry $config = null, ?\JApplicationWebClient $client = null)
 	{
 		// If an input object is given use it.
 		if ($input instanceof Input)
@@ -1132,7 +1132,7 @@ class WebApplication extends BaseApplication
 	 *
 	 * @since   1.7.3
 	 */
-	public function loadDocument(\JDocument $document = null)
+	public function loadDocument(?\JDocument $document = null)
 	{
 		$this->document = ($document === null) ? \JFactory::getDocument() : $document;
 
@@ -1152,7 +1152,7 @@ class WebApplication extends BaseApplication
 	 *
 	 * @since   1.7.3
 	 */
-	public function loadLanguage(\JLanguage $language = null)
+	public function loadLanguage(?\JLanguage $language = null)
 	{
 		$this->language = ($language === null) ? \JFactory::getLanguage() : $language;
 
@@ -1172,7 +1172,7 @@ class WebApplication extends BaseApplication
 	 *
 	 * @since   1.7.3
 	 */
-	public function loadSession(\JSession $session = null)
+	public function loadSession(?\JSession $session = null)
 	{
 		if ($session !== null)
 		{

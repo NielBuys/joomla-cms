@@ -25,6 +25,8 @@ class FOFToolbar
 	/** @var array Input (e.g. request) variables */
 	protected $input = array();
 
+	protected $component;
+
 	/** @var array Permissions map, see the __construct method for more information */
 	public $perms = array();
 
@@ -36,6 +38,10 @@ class FOFToolbar
 
 	/** @var bool Should I render buttons in the front-end? */
 	protected $renderFrontendButtons = false;
+
+	protected $view;
+
+	protected $task;
 
 	/**
 	 * Gets an instance of a component's toolbar

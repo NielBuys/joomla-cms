@@ -554,7 +554,7 @@ abstract class JLoader
 					// We check for class_exists to handle case-sensitive file systems
 					if (file_exists($classFilePath) && !class_exists($class, false))
 					{
-						$found = (bool) include_once $classFilePath;
+						$found = (bool) (include_once $classFilePath);
 
 						if ($found)
 						{
