@@ -6,8 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'Brumann\\Polyfill\\DisallowedClassesSubstitutor' => $vendorDir . '/brumann/polyfill-unserialize/src/DisallowedClassesSubstitutor.php',
-    'Brumann\\Polyfill\\Unserialize' => $vendorDir . '/brumann/polyfill-unserialize/src/Unserialize.php',
     'Cache_Lite' => $vendorDir . '/pear/cache_lite/Cache/Lite.php',
     'CallbackFilterIterator' => $vendorDir . '/joomla/compat/src/CallbackFilterIterator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',

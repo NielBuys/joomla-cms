@@ -1,24 +1,15 @@
 <?php return array(
     'root' => array(
         'name' => 'joomla/joomla-cms',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '6f23353e4a1fae246b4161d62b1918329ae4c7a0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'brumann/polyfill-unserialize' => array(
-            'pretty_version' => 'v2.0.0',
-            'version' => '2.0.0.0',
-            'reference' => '46e5c18ee87d8a9b5765ef95468c1ac27bd107bf',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../brumann/polyfill-unserialize',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'doctrine/instantiator' => array(
             'pretty_version' => '1.5.0',
             'version' => '1.5.0.0',
@@ -146,9 +137,9 @@
             'dev_requirement' => false,
         ),
         'joomla/joomla-cms' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '6f23353e4a1fae246b4161d62b1918329ae4c7a0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../../',
             'aliases' => array(),
@@ -612,9 +603,9 @@
             'dev_requirement' => false,
         ),
         'typo3/phar-stream-wrapper' => array(
-            'pretty_version' => 'v2.2.2',
-            'version' => '2.2.2.0',
-            'reference' => 'cf7728109e0cab28da9ad357c3009e38d371116e',
+            'pretty_version' => 'v4.0.0',
+            'version' => '4.0.0.0',
+            'reference' => 'ce4b6e9873d4dd7dce2a397511713bf14977fdf2',
             'type' => 'library',
             'install_path' => __DIR__ . '/../typo3/phar-stream-wrapper',
             'aliases' => array(),
