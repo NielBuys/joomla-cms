@@ -91,10 +91,6 @@ class ComposerStaticInitc14bde14f8c86840049f5c1809c453dd
         array (
             'Doctrine\\Instantiator\\' => 22,
         ),
-        'B' => 
-        array (
-            'Brumann\\Polyfill\\' => 17,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -240,10 +236,6 @@ class ComposerStaticInitc14bde14f8c86840049f5c1809c453dd
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
-        'Brumann\\Polyfill\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/brumann/polyfill-unserialize/src',
-        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -264,8 +256,6 @@ class ComposerStaticInitc14bde14f8c86840049f5c1809c453dd
     );
 
     public static $classMap = array (
-        'Brumann\\Polyfill\\DisallowedClassesSubstitutor' => __DIR__ . '/..' . '/brumann/polyfill-unserialize/src/DisallowedClassesSubstitutor.php',
-        'Brumann\\Polyfill\\Unserialize' => __DIR__ . '/..' . '/brumann/polyfill-unserialize/src/Unserialize.php',
         'Cache_Lite' => __DIR__ . '/..' . '/pear/cache_lite/Cache/Lite.php',
         'CallbackFilterIterator' => __DIR__ . '/..' . '/joomla/compat/src/CallbackFilterIterator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',

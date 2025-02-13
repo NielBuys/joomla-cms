@@ -1,49 +1,6 @@
 {
     "packages": [
         {
-            "name": "brumann/polyfill-unserialize",
-            "version": "v2.0.0",
-            "version_normalized": "2.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dbrumann/polyfill-unserialize.git",
-                "reference": "46e5c18ee87d8a9b5765ef95468c1ac27bd107bf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dbrumann/polyfill-unserialize/zipball/46e5c18ee87d8a9b5765ef95468c1ac27bd107bf",
-                "reference": "46e5c18ee87d8a9b5765ef95468c1ac27bd107bf",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3|^7.0"
-            },
-            "time": "2020-07-24T10:16:53+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Brumann\\Polyfill\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Denis Brumann",
-                    "email": "denis.brumann@sensiolabs.de"
-                }
-            ],
-            "description": "Backports unserialize options introduced in PHP 7.0 to older PHP versions.",
-            "support": {
-                "issues": "https://github.com/dbrumann/polyfill-unserialize/issues",
-                "source": "https://github.com/dbrumann/polyfill-unserialize/tree/v2.0.0"
-            },
-            "install-path": "../brumann/polyfill-unserialize"
-        },
-        {
             "name": "doctrine/instantiator",
             "version": "1.5.0",
             "version_normalized": "1.5.0.0",
@@ -4119,33 +4076,37 @@
         },
         {
             "name": "typo3/phar-stream-wrapper",
-            "version": "v2.2.2",
-            "version_normalized": "2.2.2.0",
+            "version": "v4.0.0",
+            "version_normalized": "4.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/phar-stream-wrapper.git",
-                "reference": "cf7728109e0cab28da9ad357c3009e38d371116e"
+                "reference": "ce4b6e9873d4dd7dce2a397511713bf14977fdf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/cf7728109e0cab28da9ad357c3009e38d371116e",
-                "reference": "cf7728109e0cab28da9ad357c3009e38d371116e",
+                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/ce4b6e9873d4dd7dce2a397511713bf14977fdf2",
+                "reference": "ce4b6e9873d4dd7dce2a397511713bf14977fdf2",
                 "shasum": ""
             },
             "require": {
-                "brumann/polyfill-unserialize": "^1.0 || ^2.0",
                 "ext-json": "*",
-                "php": "^5.3.3 || ^7.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "ext-xdebug": "*",
-                "phpunit/phpunit": "^4.8.36"
+                "phpunit/phpunit": "^7 || ^8 || ^9"
             },
             "suggest": {
                 "ext-fileinfo": "For PHP builtin file type guessing, otherwise uses internal processing"
             },
-            "time": "2021-09-20T19:19:38+00:00",
+            "time": "2024-12-10T00:00:25+00:00",
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -4166,7 +4127,7 @@
             ],
             "support": {
                 "issues": "https://github.com/TYPO3/phar-stream-wrapper/issues",
-                "source": "https://github.com/TYPO3/phar-stream-wrapper/tree/v2.2.2"
+                "source": "https://github.com/TYPO3/phar-stream-wrapper/tree/v4.0.0"
             },
             "install-path": "../typo3/phar-stream-wrapper"
         },
