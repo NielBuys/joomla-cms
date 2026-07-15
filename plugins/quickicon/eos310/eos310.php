@@ -202,11 +202,11 @@ class PlgQuickiconEos310 extends CMSPlugin
 				'id'            => 5,
 				'messageText'   => 'PLG_QUICKICON_EOS310_MESSAGE_ERROR_SUPPORT_ENDED',
 				'quickiconText' => 'PLG_QUICKICON_EOS310_MESSAGE_ERROR_SUPPORT_ENDED_SHORT',
-				'messageType'   => 'error',
-				'image'         => 'minus-circle',
+				'messageType'   => 'warning',
+				'image'         => 'warning-circle',
 				'messageLink'   => 'https://docs.joomla.org/Special:MyLanguage/Planning_for_Mini-Migration_-_Joomla_3.10.x_to_4.x',
-				'groupText'     => 'PLG_QUICKICON_EOS310_GROUPNAME_EOS',
-				'snoozable'     => false,
+				'groupText'     => 'PLG_QUICKICON_EOS310_GROUPNAME_WARNING',
+				'snoozable'     => true,
 			);
 		}
 
