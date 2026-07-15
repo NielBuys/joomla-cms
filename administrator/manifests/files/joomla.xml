@@ -47,12 +47,10 @@
 
 	<updateservers>
 		<!--
-			No update server configured yet for this fork.
-			To enable in-CMS updates in future, host an update XML and uncomment/replace below:
-			<server name="NielBuys Joomla 3 Fork" type="collection">https://your-domain.example/update/list.xml</server>
-
+			Community-maintained update server for this fork (see list.xml / updates.xml at the repo root).
 			Original Joomla core update server (do NOT use on this fork - would offer stock Joomla files):
 			<server name="Joomla! Core" type="collection">https://update.joomla.org/core/list.xml</server>
 		-->
+		<server name="NielBuys Joomla 3 Fork" type="collection">https://raw.githubusercontent.com/NielBuys/joomla-cms-v3/3.10-dev/list.xml</server>
 	</updateservers>
 </extension>
