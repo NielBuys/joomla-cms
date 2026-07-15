@@ -79,7 +79,7 @@ class JoomlaupdateModelDefault extends JModelLegacy
 			 * case 'nochange':
 			 */
 			default:
-				$updateURL = 'https://update.joomla.org/core/list.xml';
+				$updateURL = 'https://raw.githubusercontent.com/NielBuys/joomla-cms-v3/3.10-dev/list.xml';
 		}
 
 		$db = $this->getDbo();

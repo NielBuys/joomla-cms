@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Joomla CMS update collection for the NielBuys/joomla-cms-v3 fork.
+
+	This is the "collection" file the Joomla! Update component fetches (the core update
+	site is type="collection"). It points at updates.xml, which holds the actual per-version
+	<update> entries. Do not rename without also updating:
+	  - administrator/components/com_joomlaupdate/models/default.php  (default source URL)
+	  - installation/sql/*/joomla.sql                                 (#__update_sites seed)
+
+	Served at: https://raw.githubusercontent.com/NielBuys/joomla-cms-v3/3.10-dev/list.xml
+-->
+<extensionset name="Joomla! Core (NielBuys fork)" description="Joomla 3 fork - community-maintained security updates">
+	<extension name="Joomla" element="joomla" type="file" version="3.0.0" detailsurl="https://raw.githubusercontent.com/NielBuys/joomla-cms-v3/3.10-dev/updates.xml"/>
+</extensionset>
