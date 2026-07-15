@@ -88,6 +88,19 @@ JHtml::_('bootstrap.tooltip');
 			<label for="modlgn-remember" class="control-label"><?php echo JText::_('MOD_LOGIN_REMEMBER_ME'); ?></label> <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
 		</div>
 		<?php endif; ?>
+		<?php
+		// Login CAPTCHA (plg_authentication_logincaptcha). Rendered only when the plugin is enabled.
+		if (JPluginHelper::isEnabled('authentication', 'logincaptcha')) :
+			JPluginHelper::importPlugin('authentication', 'logincaptcha');
+			$captchaResults = JEventDispatcher::getInstance()->trigger('showcaptcha', array());
+			if (!empty($captchaResults[0][0])) : ?>
+		<div id="form-login-captcha" class="control-group">
+			<div class="controls">
+				<?php echo $captchaResults[0][0]; ?>
+			</div>
+		</div>
+		<?php endif;
+		endif; ?>
 		<div id="form-login-submit" class="control-group">
 			<div class="controls">
 				<button type="submit" tabindex="0" name="Submit" class="btn btn-primary login-button"><?php echo JText::_('JLOGIN'); ?></button>

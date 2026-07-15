@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="authentication" method="upgrade">
+	<name>plg_authentication_logincaptcha</name>
+	<author>Niel Buys</author>
+	<creationDate>October 2018</creationDate>
+	<copyright>Copyright (C) 2018 Niel Buys. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>nielbuys@winems.co.za</authorEmail>
+	<authorUrl>www.winems.co.za</authorUrl>
+	<version>1.1.0</version>
+	<description>PLG_LOGINCAPTCHA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="logincaptcha">logincaptcha.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_authentication_logincaptcha.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_authentication_logincaptcha.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="DisableCaptchaSetCookie" type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					description="PLG_LOGINCAPTCHA_SETCOOKIE_DESC"
+					label="PLG_LOGINCAPTCHA_SETCOOKIE_LABEL"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				<field name="CookieTime" type="text"
+					default="7889238"
+					description="PLG_LOGINCAPTCHA_COOKIETIME_DESC"
+					label="PLG_LOGINCAPTCHA_COOKIETIME_LABEL"
+					filter="integer"
+					size="10"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

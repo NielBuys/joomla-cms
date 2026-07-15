@@ -15,7 +15,14 @@ use Joomla\Registry\Registry;
 /**
  * GMail Authentication Plugin
  *
- * @since  1.5
+ * @since       1.5
+ *
+ * @deprecated  This plugin no longer works and will be removed in a future release.
+ *              Google removed the Basic-authentication ATOM mail feed
+ *              (https://mail.google.com/mail/feed/atom) that this plugin relies on, so
+ *              authentication will always fail. It is retained only for backward
+ *              compatibility with existing installations. Disable it and use another
+ *              authentication method.
  */
 class PlgAuthenticationGMail extends JPlugin
 {
@@ -34,6 +41,18 @@ class PlgAuthenticationGMail extends JPlugin
 	{
 		// Load plugin language
 		$this->loadLanguage();
+
+		// This plugin is deprecated and no longer functional (see class docblock). Warn and log.
+		JLog::add('The Gmail authentication plugin is deprecated and no longer works; it will be removed in a future release.', JLog::WARNING, 'deprecated');
+
+		try
+		{
+			JFactory::getApplication()->enqueueMessage(JText::_('PLG_GMAIL_DEPRECATED'), 'warning');
+		}
+		catch (Exception $e)
+		{
+			// CLI or no application; nothing to enqueue.
+		}
 
 		// No backend authentication
 		if (JFactory::getApplication()->isClient('administrator') && !$this->params->get('backendLogin', 0))
