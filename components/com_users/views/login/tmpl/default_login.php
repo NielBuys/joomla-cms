@@ -51,6 +51,19 @@ JHtml::_('behavior.formvalidator');
 					</div>
 				</div>
 			<?php endif; ?>
+				<?php
+				// Login CAPTCHA (plg_authentication_logincaptcha). Rendered only when the plugin is enabled.
+				if (JPluginHelper::isEnabled('authentication', 'logincaptcha')) :
+					JPluginHelper::importPlugin('authentication', 'logincaptcha');
+					$captchaResults = JEventDispatcher::getInstance()->trigger('showcaptcha', array());
+					if (!empty($captchaResults[0][0])) : ?>
+				<div class="control-group">
+					<div class="controls">
+						<?php echo $captchaResults[0][0]; ?>
+					</div>
+				</div>
+				<?php endif;
+				endif; ?>
 			<div class="control-group">
 				<div class="controls">
 					<button type="submit" class="btn btn-primary">

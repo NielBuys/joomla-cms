@@ -36,6 +36,16 @@ JHtml::_('behavior.keepalive');
 
 		<div class="clr"></div>
 
+		<?php
+		// Login CAPTCHA (plg_authentication_logincaptcha). Rendered only when the plugin is enabled.
+		if (JPluginHelper::isEnabled('authentication', 'logincaptcha')) :
+			JPluginHelper::importPlugin('authentication', 'logincaptcha');
+			$captchaResults = JEventDispatcher::getInstance()->trigger('showcaptcha', array());
+			if (!empty($captchaResults[0][0])) :
+				echo $captchaResults[0][0];
+			endif;
+		endif; ?>
+
 		<div class="button-holder">
 			<div class="button1">
 				<div class="next">
