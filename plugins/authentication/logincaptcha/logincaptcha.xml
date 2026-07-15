@@ -12,11 +12,10 @@
 	<files>
 		<filename plugin="logincaptcha">logincaptcha.php</filename>
 		<filename>index.html</filename>
-		<folder>language</folder>
 	</files>
 	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.plg_authentication_logincaptcha.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.plg_authentication_logincaptcha.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_authentication_logincaptcha.ini</language>
+		<language tag="en-GB">en-GB.plg_authentication_logincaptcha.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
