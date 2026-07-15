@@ -426,6 +426,14 @@ abstract class AKAbstractPart extends AKAbstractObject
 	protected $hasRan = false;
 
 	/**
+	 * Indicates whether this part has finished its run cycle (actual property used by the engine;
+	 * declared to avoid PHP 8.2+ dynamic property deprecation - $hasRan above is a legacy misspelling)
+	 *
+	 * @var boolean
+	 */
+	protected $hasRun = false;
+
+	/**
 	 * The name of the engine part (a.k.a. Domain), used in return table
 	 * generation.
 	 *
@@ -4312,8 +4320,8 @@ class AKEncryptionAES
 
 	protected static function urs($a, $b)
 	{
-		$a &= 0xffffffff;
-		$b &= 0x1f;  // (bounds check)
+		$a = (int) $a & 0xffffffff;
+		$b = (int) $b & 0x1f;  // (bounds check)
 		if ($a & 0x80000000 && $b > 0)
 		{   // if left-most bit set
 			$a = ($a >> 1) & 0x7fffffff;   //   right-shift one bit & clear left-most bit

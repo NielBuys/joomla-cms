@@ -169,7 +169,7 @@ class CMSApplication extends WebApplication
 	public function enqueueMessage($msg, $type = 'message')
 	{
 		// Don't add empty messages.
-		if (trim($msg) === '')
+		if (trim((string) $msg) === '')
 		{
 			return;
 		}

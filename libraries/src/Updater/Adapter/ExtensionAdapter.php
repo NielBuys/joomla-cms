@@ -346,7 +346,11 @@ class ExtensionAdapter extends UpdateAdapter
 			return false;
 		}
 
-		xml_parser_free($this->xmlParser);
+		// xml_parser_free() has no effect since PHP 8.0 (parsers are GC'd objects) and is deprecated since PHP 8.5
+		if (PHP_VERSION_ID < 80000)
+		{
+			xml_parser_free($this->xmlParser);
+		}
 
 		if (isset($this->latest))
 		{
